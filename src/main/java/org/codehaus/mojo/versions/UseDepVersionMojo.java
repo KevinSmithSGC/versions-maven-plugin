@@ -42,11 +42,11 @@ public class UseDepVersionMojo extends AbstractVersionsDependencyUpdaterMojo {
 			XMLStreamException, ArtifactMetadataRetrievalException {
 		
 		if (depVersion == null || depVersion.equals("")) {
-			throw new IllegalArgumentException("depVersion must be supplied with use-specific-version, and cannot be blank.");
+			throw new IllegalArgumentException("depVersion must be supplied with use-dep-version, and cannot be blank.");
 		}
 		
 		if (!forceVersion && !hasIncludes()) {
-			throw new IllegalArgumentException("The use-specific-version goal is intended to be used with a single artifact. Please specify a value for the 'includes' parameter, or use -DforceVersion=true to override this check.");
+			throw new IllegalArgumentException("The use-dep-version goal is intended to be used with a single artifact. Please specify a value for the 'includes' parameter, or use -DforceVersion=true to override this check.");
 		}
 		
 		try {
